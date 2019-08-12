@@ -7,6 +7,7 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ public class Formula1Api {
 	@Autowired 
 	RestTemplate restTemplate;
 	
+	@CrossOrigin({"*"})
 	@RequestMapping(value="/template/f1results", method=RequestMethod.GET)
 	public String getProductsByTemplate() {
 		try {
